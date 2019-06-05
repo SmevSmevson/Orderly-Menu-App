@@ -1,0 +1,9 @@
+#header{
+    .header-title{
+        font-size: var(--header-title-font-size, 2rem);
+        color: var(--G-header-title-color,var(--header-title-color , black));     //--G-header-title-color will overide if declared, 
+                                                                                    //if not fallback to --header-title-color if diclared, 
+                                                                                    //if not fallback to black
+        font-family: var(--G-header-font-family);
+    }
+}

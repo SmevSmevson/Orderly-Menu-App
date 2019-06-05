@@ -1,0 +1,9 @@
+:root {
+    // not sure if this is needed since we already use css vars
+    // could be useful if we have multiple --header-title-color in different
+    // components would act like !important overiting everything
+    // --G-header-title-color: #eee;  //adding this will overite --header-title-color
+
+    // use --G-{var name} when the variable is used in more then one component
+    --G-header-font-family: 'Josefin Sans', sans-serif;
+}
