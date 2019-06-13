@@ -5,7 +5,10 @@
 }
 
 // if we wanted to use the same var name in a different scope we can
-// #footer{
-//     --header-title-font-size: 4em;     //this will not ovewrite the previous decleration in #header 
+#footer{
+    --footer-title-font-size: 4em;     //this will not ovewrite the previous decleration in #header 
                                     //as this is a different scope and so it is a new var 
-// }
+    --footer-title-x: 50%;
+    --footer-title-y: 50%;
+    --footer-border-radius: 1rem 2rem 1rem 2rem;
+}
