@@ -1,13 +1,16 @@
 import React from 'react'
+import { Router } from '@reach/router'
 import CSSVarsContextProvider from './ContextProviders/CSSVarsContext'
-import Customizer from './components/Customizer'
-import Header from './components/Header'
+import Home from './views/Home'
+import Item from './views/Item'
 
 const App = () => {
 	return (
 		<CSSVarsContextProvider>
-			<Customizer />
-			<Header />
+			<Router>
+				<Home path="/" />
+				<Item path="/item/:id" />
+			</Router>
 		</CSSVarsContextProvider>
 	)
 }
