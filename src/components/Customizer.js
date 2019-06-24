@@ -1,13 +1,11 @@
 import React, { useContext } from 'react'
-import { changeCSSVar } from '../GetCSSHelper'
 import { CSSVarsContext } from '../ContextProviders/CSSVarsContext'
 import '../styles/scss/main.scss'
 
 const Customizer = () => {
     const context = useContext(CSSVarsContext)
-	const [customVars, setCustomVars] = context.customVars
-	const [node, setNode] = context.node
-    console.log(customVars,node)
+	const customVars = context.customVars
+	console.log(customVars)
 
 	return (
 		<div className="editor-section">
@@ -20,7 +18,7 @@ const Customizer = () => {
 							id={value.property}
 							type={value.value.includes('#') ? 'color' : 'text'}
 							placeholder={value.value}
-							onChange={(e) => changeCSSVar(e, value, node)}
+							onChange={(e) => context.changeCSSVar(e, value)}
 						/>
 					</div>
 				)

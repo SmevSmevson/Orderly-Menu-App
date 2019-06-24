@@ -1,13 +1,9 @@
 import React, { useContext } from 'react'
-import { getElementCSSVars } from '../GetCSSHelper'
 import { CSSVarsContext } from '../ContextProviders/CSSVarsContext'
 import '../styles/scss/main.scss'
 
 const Header = () => {
 	const context = useContext(CSSVarsContext)
-	const [customVars, setCustomVars] = context.customVars
-	const [node, setNode] = context.node
-
 
 	return (
 		<div>
@@ -15,8 +11,7 @@ const Header = () => {
 			{/* if so lets change this to a class */}
 			<header id="header" 
 				onClick={(e) => {
-					setCustomVars(getElementCSSVars(e))
-					setNode(e.currentTarget)
+					context.getElementCSSVars(e)
 					}
 				}>
 				<h1 className="header-title">CSS var test 1</h1>
@@ -24,8 +19,7 @@ const Header = () => {
 			</header>
 
 			<footer id="footer" onClick={(e) => {
-				setCustomVars(getElementCSSVars(e))
-				setNode(e.currentTarget)
+				context.getElementCSSVars(e)
 				}
 			}>
 				<h1 className="footer-title">CSS var test 3</h1>
