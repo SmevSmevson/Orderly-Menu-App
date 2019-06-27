@@ -1,0 +1,39 @@
+#header{
+    .header-title{
+        font-size: var(--header-title-font-size, 2rem);
+        color: var(--G-header-title-color,var(--header-title-color , black));     //--G-header-title-color will overide if declared, 
+                                                                                    //if not fallback to --header-title-color if diclared, 
+                                                                                    //if not fallback to black
+        font-family: var(--G-header-font-family);
+        border-bottom: 2px solid;
+    }
+}
+
+.editor-section{
+    position: fixed;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 200px;
+    background-color: #ccc;
+    border-left: #999 solid 1px;
+    padding: 1rem;
+    z-index: 1000;
+}
+
+#footer{
+    position: relative;  
+    height: 20rem;
+
+    .footer-title{
+        position: absolute;
+        top: var(--footer-title-y, 50%);
+        left: var(--footer-title-x, 50%);
+        transform: translate(-50%,-50%);
+        border: 1px solid #111111;
+        border-radius: var(--footer-border-radius, 1rem 1rem 1rem 1rem);
+        transform-origin: center;
+        font-size: var(--footer-title-font-size, 2rem);
+        transition: all 300ms;
+    }
+}
