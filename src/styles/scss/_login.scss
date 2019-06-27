@@ -1,0 +1,39 @@
+.login-form{
+    width: 50vw;
+    height: 50vh;
+    margin: 20vh 20vw;
+    padding: 5vh 5vw;
+    border: 1px grey solid;
+    background-color: bisque;
+
+    display: grid;
+    place-items: center stretch;;
+
+    grid-template-columns: max-content 1fr;
+    grid-template-areas: 
+    "accl acc"
+    "pswl psw"
+    "btn btn"
+}
+
+.acc-label{
+    grid-area: accl;
+    text-align: right;
+}
+
+.acc-input{
+    grid-area: acc;
+}
+
+.psw-label{
+    grid-area: pswl;
+    text-align: right;
+}
+
+.psw-input{
+    grid-area: psw;
+}
+
+.btn-login{
+    grid-area: btn;
+}

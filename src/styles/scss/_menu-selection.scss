@@ -1,0 +1,45 @@
+.menu-container{
+    width: 50vw;
+    height: 50vh;
+    margin: 20vh 20vw;
+    padding: 5vh 5vw;
+    border: 1px grey solid;
+    background-color: bisque;
+
+    display: grid;
+    place-items: stretch;;
+
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 1em;
+    grid-template-areas: 
+    "cus csh"
+    "wtr coo"
+}
+
+.alt-1{
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas: 
+    "cus csh wtr coo"
+}
+
+.alt-2{
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+    "cus" "csh" "wtr" "coo"
+}
+
+.btn-customer{
+    grid-area: cus;
+}
+
+.btn-casher{
+    grid-area: csh;
+}
+
+.btn-waiter{
+    grid-area: wtr;
+}
+
+.btn-cook{
+    grid-area: coo;
+}
