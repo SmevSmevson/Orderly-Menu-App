@@ -1,6 +1,6 @@
-import React, { useState, createContext } from "react"
+import React, { useState, createContext } from 'react'
 
-export const CSSVarsContext = createContext(["customVars", ()=>{}])
+export const CSSVarsContext = createContext(['customVars', () => {}])
 
 const CSSVarsContextProvider = (props) => {
     const [customVars, setCustomVars] = useState([])

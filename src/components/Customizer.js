@@ -9,8 +9,7 @@ const Customizer = () => {
 
 	return (
 		<div className="editor-section">
-			{
-                customVars.map((value, index) => {
+			{customVars.map((value, index) => {
 				return (
 					<div key={index}>
 						<label htmlFor={value.property}>{value.property}:</label>
