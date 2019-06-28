@@ -1,0 +1,100 @@
+.item-details-screen-layout{
+    display: grid;
+    place-items: stretch;
+    height: 100vh;
+
+    grid-template-columns: 1fr;
+    grid-template-rows: 4em 1fr;
+    grid-template-areas: 
+    "sch"
+    "itm"
+}
+
+.item-details-screen-layout>*{
+    border: 1px darkgray solid;
+}
+
+.item-details-search-container{
+    grid-area: sch;
+
+    display: grid;
+    place-items: stretch;
+    grid-template-columns: 1fr 4fr 1fr;
+}
+
+.item-details-container{
+    grid-area: itm;
+    padding: 1em;
+    width: 90vw;
+    height: 80vh;
+
+    align-self: center;
+    justify-self: center;
+}
+
+.item-details{
+    position: relative;
+    height: 100%;
+
+    display: grid;
+    place-items: stretch;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    grid-gap: 1em;
+    grid-template-areas: 
+    "img img nme nme nut nut"
+    "img img prc prc nut nut"
+    "dec dec dec alg alg alg"
+    "dec dec dec ado ado ado"
+}
+
+.item-details-alt-1{
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-areas: 
+    "img img nme nut"
+    "img img prc nut"
+    "img img alg alg"
+    "dec dec ado ado"
+}
+
+.item-details>*{
+    border: 1px solid darkslateblue;
+}
+
+.item-details-badge{
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    width: 80px;
+    height: 80px;
+    background-color: #eee
+}
+
+.item-details-img{
+    grid-area: img;
+}
+
+.item-details-name{
+    grid-area: nme;
+}
+
+.item-details-price{
+    grid-area: prc;
+}
+
+.item-details-nutritional-info{
+    grid-area: nut
+}
+
+.item-details-discription{
+    grid-area: dec;
+}
+
+.item-details-allergies{
+    grid-area: alg;
+}
+
+.item-details-add-btn{
+    grid-area: ado;
+}

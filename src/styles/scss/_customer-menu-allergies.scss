@@ -1,0 +1,64 @@
+.allergy-screen-layout{
+    display: grid;
+    place-items: stretch;
+    height: 100vh;
+
+    grid-template-columns: 1fr;
+    grid-template-rows: 4em 1fr;
+    grid-template-areas: 
+    "sch"
+    "alg"
+}
+
+.allergy-screen-layout>*{
+    border: 1px darkgray solid;
+}
+
+.allergy-search-container{
+    grid-area: sch;
+
+    display: grid;
+    place-items: stretch;
+    grid-template-columns: 1fr 4fr 1fr;
+}
+
+.allergy-container{
+    grid-area: alg;
+    padding: 1em;
+    width: 90vw;
+    height: 80vh;
+
+    align-self: center;
+    justify-self: center;
+
+    align-content: center;
+
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-template-rows: repeat(6, 1fr);
+    grid-gap: 1em;
+    grid-auto-flow: dense;
+
+    overflow: scroll;
+
+}
+
+.allergy-container>*{
+    border: 1px darkblue solid;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.allergy{
+    position: relative;
+}
+
+.allergy-icon{
+    height: 75%;
+}
+
+.allergy-selected {
+    background-color: #eee;
+}

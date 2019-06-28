@@ -55,6 +55,7 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(3, 1fr);
+    grid-auto-flow: dense;
     grid-gap: 1em;
 
     overflow: scroll;
@@ -87,8 +88,10 @@
     background-color: #eee
 }
 
-.menu-item-image{
-    height: 75%;
+.menu-item-image {
+	width: 100%;
+	height: 75%;
+	object-fit: cover;
 }
 
 .menu-pagination-container{

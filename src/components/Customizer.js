@@ -1,6 +1,5 @@
 import React, { useContext } from 'react'
 import { CSSVarsContext } from '../ContextProviders/CSSVarsContext'
-import '../styles/scss/main.scss'
 
 const Customizer = () => {
     const context = useContext(CSSVarsContext)
