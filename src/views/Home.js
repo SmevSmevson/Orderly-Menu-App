@@ -14,6 +14,8 @@ const Home = () => {
 				<Link to="/customer-menu">Go to customer menu</Link>
 				<Link to="/customer-menu/confirm-item">Go to customer menu confirm item</Link>
 				<Link to="/customer-menu/allergies">Go to customer menu allergies</Link>
+				<Link to="/customer-menu/confirm-order">Go to confirm order</Link>
+				<Link to="/customer-menu/order-complete">Go to complete order</Link>
 
 			</div>
 		</>

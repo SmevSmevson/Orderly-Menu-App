@@ -1,0 +1,88 @@
+.confirm-screen-layout {
+    height: 90vh;
+    width: 80vw;
+    margin: 5vh auto;
+    border: 5px double darkslateblue;
+
+}
+.confirm-receipt-container{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.confirm-receipt-title{
+    text-align: center;
+}
+
+.confirm-receipt-item{
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1em .5em 1em 1.5em;
+    border: 1px dashed darkolivegreen;
+}
+
+.confirm-receipt-item-cancel{
+    position: absolute;
+    top:0;
+    left: 0;
+    bottom: 0;
+    padding: 0;
+}
+
+.confirm-receipt-item-img{
+    width: 80px;
+    height: 80px;
+}
+
+.confirm-receipt-item-name{
+    font-style: italic;
+    font-weight: 900;
+}
+
+.confirm-receipt-item-amount{
+    width: 1em;
+}
+
+.confirm-receipt-item-set-container{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding-top: 1em;
+}
+
+.confirm-receipt-item-set{
+    display: flex;
+    justify-content: space-between;
+    padding: .1em 0;
+    border-top: 1px dashed darkolivegreen;
+}
+
+.confirm-receipt-total{
+    margin-top: auto;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 1em .5em 1em 1.5em;
+    border: 1px dashed darkolivegreen;
+}
+
+.confirm-receipt-item-total{
+    color: darkgreen;
+    font-weight: 900;
+    letter-spacing: .2ch;
+}
+
+.confirm-receipt-buttons-container {
+    display: flex;
+    justify-content: stretch;
+}
+
+.confirm-receipt-order, .confirm-receipt-back{
+    height: 6em;
+    flex: 1 0 auto;;
+}

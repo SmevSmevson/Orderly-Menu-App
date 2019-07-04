@@ -1,5 +1,5 @@
 import React from 'react'
-import {navigate} from '@reach/router'
+import { navigate } from '@reach/router'
 
 const CustomerMenuItem = ({item}) => {  
 
@@ -7,7 +7,7 @@ const CustomerMenuItem = ({item}) => {
         if(item.setItem){
             navigate(`customer-menu/confirm-set-item`)
         } else {
-            navigate(`customer-menu/confirm-item`)
+            navigate(`customer-menu/confirm-item/${item.id}`, { state: { item: item }})
         }
     }
     

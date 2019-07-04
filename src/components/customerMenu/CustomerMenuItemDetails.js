@@ -1,8 +1,8 @@
 import React from 'react'
 import { navigate } from "@reach/router";
 
-const CustomerMenuItemDetails = () => {
-
+const CustomerMenuItemDetails = ({ item }) => {
+    
     const CustomerMenuItemDetailsEvent = () => {
         // TODO add item to order
         navigate('/customer-menu')
@@ -13,17 +13,26 @@ const CustomerMenuItemDetails = () => {
             <div className="item-details item-details-alt-1">
                 <img className="item-details-badge" src="#" alt="" />
                 <img className="item-details-img" src="#" alt="" />
-                <span className="item-details-name"><strong>item-details name</strong></span>
-                <span className="item-details-price">item-details price</span>
-                <span className="item-details-nutritional-info">nutritional info</span>
-                <span className="item-details-discription">item-details description : <br />Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit, ad eveniet molestiae debitis molestias repellendus accusamus amet deleniti cupiditate, repudiandae, architecto sapiente illo. Non sunt aliquam sequi commodi quod eum!</span>
+                <span className="item-details-name"><strong>{item.name}</strong></span>
+                <span className="item-details-price">{item.price}</span>
+                <div className="item-details-nutritional-info">
+                    {item.nutrition.map(info => {
+                        return (
+                                <div key={info.category}>{info.category} : {info.amount}</div>
+                                )
+                            })
+                    }
+                </div>
+                <span className="item-details-discription">{item.description}</span>
                 <div className="item-details-allergies">
-                    {/* TODO add allergies in loop. Keep code dry */}
-                    allergies
-                    <img className="item-details-allergy-icon" src="#" alt="" title="allergy" />
-                    <img className="item-details-allergy-icon" src="#" alt="" title="allergy" />
-                    <img className="item-details-allergy-icon" src="#" alt="" title="allergy" />
-                    <img className="item-details-allergy-icon" src="#" alt="" title="allergy" />
+                    {item.allergies.map(allergy => {
+                        return (
+                            <>
+                                <img className="item-details-allergy-icon" src="#" alt="" title="allergy" key={allergy}/>
+                                <div>{ allergy }</div>
+                            </>
+                        )
+                    })}
                 </div>
                 <button onClick={CustomerMenuItemDetailsEvent} className="item-details-add-btn">add to order</button>
             </div>

@@ -7,7 +7,7 @@ const CustomerMenuAllergyList = () => {
 	return (
 		<div className="allergy-container">
 			{allergies.map((allergy) => {
-				return <CustomerMenuAllergy allergy={allergy} />
+				return <CustomerMenuAllergy allergy={allergy} key={allergy.id}/>
 			})}
 		</div>
 	)

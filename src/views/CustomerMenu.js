@@ -5,7 +5,7 @@ import CustomerMenuItemList from "../components/customerMenu/CustomerMenuItemLis
 import CustomerMenuPagination from "../components/customerMenu/CustomerMenuPagination";
 import CustomerMenuReceipt from "../components/customerMenu/CustomerMenuReceipt";
 
-const CustomerMenu = ({ navigate }) => {
+const CustomerMenu = () => {
 
 	return (
         <div className="menu-screen-layout layout-alt-1">

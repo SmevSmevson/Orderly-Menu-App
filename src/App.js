@@ -1,5 +1,6 @@
 import React from 'react'
 import { Router } from '@reach/router'
+import './styles/scss/main.scss'
 import CSSVarsContextProvider from './ContextProviders/CSSVarsContext'
 // import Customizer from './components/Customizer'
 
@@ -11,8 +12,9 @@ import CustomerMenu from './views/CustomerMenu';
 import CustomerMenuSetup from './views/CustomerMenuSetup';
 import CustomerMenuConfirmItem from "./views/CustomerMenuConfirmItem";
 import CustomerMenuAllergies from "./views/CustomerMenuAllergies";
+import CustomerMenuConfirmOrder from "./views/CustomerMenuConfirmOrder";
+import CustomerMenuOrderComplete from './views/CustomerMenuOrderComplete';
 
-import './styles/scss/main.scss'
 
 const App = () => {
 	return (
@@ -25,9 +27,10 @@ const App = () => {
 				<MenuSelection path="/menu-selection" />
 				<CustomerMenuSetup path="/customer-menu-setup" />
 				<CustomerMenu path="customer-menu" />
-				<CustomerMenuConfirmItem path="customer-menu/confirm-item" />
+				<CustomerMenuConfirmItem path="customer-menu/confirm-item/:id" />
 				<CustomerMenuAllergies path="customer-menu/allergies" />
-
+				<CustomerMenuConfirmOrder path="customer-menu/confirm-order" />
+				<CustomerMenuOrderComplete path="customer-menu/order-complete" />
 			</Router>
 		</CSSVarsContextProvider>
 	)
