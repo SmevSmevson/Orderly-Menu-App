@@ -5,6 +5,8 @@ import CustomerMenuItemList from "../components/customerMenu/CustomerMenuItemLis
 import CustomerMenuPagination from "../components/customerMenu/CustomerMenuPagination";
 import CustomerMenuReceipt from "../components/customerMenu/CustomerMenuReceipt";
 
+import OrderContextProvider from "../ContextProviders/OrderContext";
+
 const CustomerMenu = () => {
 
 	return (
@@ -13,7 +15,9 @@ const CustomerMenu = () => {
             <CustomerMenuTabs />
             <CustomerMenuItemList />
             <CustomerMenuPagination />
-            <CustomerMenuReceipt />        
+            <OrderContextProvider>
+                <CustomerMenuReceipt />     
+            </OrderContextProvider>
         </div>
 	)
 }

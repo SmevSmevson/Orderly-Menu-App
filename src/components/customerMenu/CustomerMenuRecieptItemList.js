@@ -1,13 +1,16 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import CustomerMenuRecieptItem from './CustomerMenuRecieptItem'
+import { OrderContext } from "../../ContextProviders/OrderContext";
 
-import { reciept } from '../../MockData/reciept'
+// import { reciept } from '../../MockData/reciept'
 
 const CustomerMenuRecieptItemList = ({showImg}) => {
+	const { order, dispatch } = useContext(OrderContext)
+	
 	return (
         <div className="confirm-receipt-container">
-            {reciept.map((item) => {
-				return <CustomerMenuRecieptItem key={item.id} item={item} showImg={showImg} />
+            {order.map((item) => {
+				return <CustomerMenuRecieptItem key={item.id} item={item} dispatch={dispatch} showImg={showImg} />
 			})}
 		</div>
 	)

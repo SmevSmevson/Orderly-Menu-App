@@ -1,10 +1,12 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { navigate } from "@reach/router";
+import { OrderContext } from "../../ContextProviders/OrderContext";
 
 const CustomerMenuItemDetails = ({ item }) => {
+    const { dispatch } = useContext(OrderContext)
     
     const CustomerMenuItemDetailsEvent = () => {
-        // TODO add item to order
+        dispatch({ type: 'ADD_ITEM', order: item })
         navigate('/customer-menu')
     }
 
@@ -27,10 +29,10 @@ const CustomerMenuItemDetails = ({ item }) => {
                 <div className="item-details-allergies">
                     {item.allergies.map(allergy => {
                         return (
-                            <>
-                                <img className="item-details-allergy-icon" src="#" alt="" title="allergy" key={allergy}/>
+                            <div key={allergy}>
+                                <img className="item-details-allergy-icon" src="#" alt="" title="allergy"/>
                                 <div>{ allergy }</div>
-                            </>
+                            </div>
                         )
                     })}
                 </div>

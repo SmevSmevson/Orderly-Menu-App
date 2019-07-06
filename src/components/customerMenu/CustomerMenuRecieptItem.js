@@ -1,9 +1,9 @@
 import React from 'react'
 
-const CustomerMenuRecieptItem = ({item, showImg}) => {
+const CustomerMenuRecieptItem = ({item, dispatch, showImg}) => {
 
     const removeItem = () => {
-        console.log("TODO remove item")
+        dispatch({ type: 'REMOVE_ITEM', order: item })
     }
 
     const addItem = () => {
