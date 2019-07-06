@@ -7,11 +7,11 @@ const CustomerMenuRecieptItem = ({item, dispatch, showImg}) => {
     }
 
     const addItem = () => {
-        console.log("TODO add item")
+        dispatch({ type: 'ADD_ITEM', order: item })
     }
 
     const subtractItem = () => {
-        console.log("TODO subtract item")
+        dispatch({ type: 'SUBTRACT_ITEM', order: item })
     }
 
     const changeAmount = () => {
