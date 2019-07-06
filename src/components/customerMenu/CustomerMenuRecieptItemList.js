@@ -2,8 +2,6 @@ import React, { useContext } from 'react'
 import CustomerMenuRecieptItem from './CustomerMenuRecieptItem'
 import { OrderContext } from "../../ContextProviders/OrderContext";
 
-// import { reciept } from '../../MockData/reciept'
-
 const CustomerMenuRecieptItemList = ({showImg}) => {
 	const { order, dispatch } = useContext(OrderContext)
 	

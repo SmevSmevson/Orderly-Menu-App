@@ -1,6 +1,7 @@
 import React from 'react'
 import { navigate } from '@reach/router'
 import CustomerMenuRecieptItemList from './CustomerMenuRecieptItemList'
+import CustomerMenuRecieptTotal from './CustomerMenuRecieptTotal';
 
 const CustomerMenuReceipt = () => {
 	const CustomerMenuReceiptEvent = () => {
@@ -11,10 +12,7 @@ const CustomerMenuReceipt = () => {
         <div className="menu-receipt-container">
             selected items
             <CustomerMenuRecieptItemList showImg={false} />
-            <div className="menu-receipt-total">
-                <span className="menu-receipt-item-name">total</span>
-                <span className="menu-receipt-item-total">¥ 20000</span>
-            </div>
+            <CustomerMenuRecieptTotal />
             <button onClick={CustomerMenuReceiptEvent} className="menu-receipt-order">order</button>
         </div>
 	)
