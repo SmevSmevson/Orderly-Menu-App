@@ -8,9 +8,11 @@ const CustomerMenuRecieptItem = ({item, dispatch, showImg}) => {
 
     const addItem = () => {
         dispatch({ type: 'ADD_ITEM', order: item })
+        dispatch({ type: 'ADD_SET_ITEMS', id: item.id })
     }
 
     const subtractItem = () => {
+        dispatch({ type: 'SUBTRACT_SET_ITEMS', id: item.id })
         dispatch({ type: 'SUBTRACT_ITEM', order: item })
     }
 
@@ -32,21 +34,18 @@ const CustomerMenuRecieptItem = ({item, dispatch, showImg}) => {
             <span>{ item.price }</span>
 
             {/* TODO need a better way to do this part */}
+            {/* order => selectedSet[index][{category,itemName}] */}
             {item.setItem?
                 <div className="confirm-receipt-item-set-container">
                     {item.setContents.map(contents => {
-                        return (
-                            <div key={item.id}>
-                                <div className="confirm-receipt-item-set">
-                                    <span>{contents.side}</span>
+                        return contents.map(item => {
+                            return (
+                                <div className="confirm-receipt-item-set" key={item.category}>
+                                    <span>{item.setItem}</span>
                                     <button>change</button>
                                 </div>
-                                <div className="confirm-receipt-item-set">
-                                    <span>{contents.drink}</span>
-                                    <button>change</button>
-                                </div>
-                            </div>
-                        )
+                            )
+                        })
                     })}
                 </div>
             :''}

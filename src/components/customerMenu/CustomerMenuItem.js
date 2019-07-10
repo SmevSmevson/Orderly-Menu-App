@@ -4,11 +4,7 @@ import { navigate } from '@reach/router'
 const CustomerMenuItem = ({item}) => {  
 
     const CustomerMenuItemEvent = () => {
-        if(item.setItem){
-            navigate(`customer-menu/confirm-set-item`)
-        } else {
-            navigate(`customer-menu/confirm-item/${item.id}`, { state: { item: item }})
-        }
+        navigate(`customer-menu/confirm-item/${item.id}`, { state: { item: item }})
     }
     
 	return (

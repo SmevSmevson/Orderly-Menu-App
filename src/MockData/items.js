@@ -11,6 +11,18 @@ export const items = [
 			{category: 'fat', amount: '100g'},
 		],
 		setItem: true,
+		setMenus: [
+			{category: 'sides', items: [
+				{name: 'fries', imageSrc: 'https://via.placeholder.com/64'},
+				{name: 'onion rings', imageSrc: 'https://via.placeholder.com/64'}
+			]},
+			{category: 'drinks', items: [
+				{name: 'cola', imageSrc: 'https://via.placeholder.com/64'},
+				{name: 'orange', imageSrc: 'https://via.placeholder.com/64'},
+				{name: 'coffee', imageSrc: 'https://via.placeholder.com/64'}
+
+			]}
+		],
 		higlight: false,
 		badgeSrc: 'https://via.placeholder.com/64',
 	},
@@ -26,6 +38,18 @@ export const items = [
 			{category: 'fat', amount: '100g'},
 		],
 		setItem: true,
+		setMenus: [
+			{category: 'sides', items: [
+				{name: 'fries', imageSrc: 'https://via.placeholder.com/64'},
+				{name: 'onion rings', imageSrc: 'https://via.placeholder.com/64'}
+			]},
+			{category: 'drinks', items: [
+				{name: 'cola', imageSrc: 'https://via.placeholder.com/64'},
+				{name: 'orange', imageSrc: 'https://via.placeholder.com/64'},
+				{name: 'coffee', imageSrc: 'https://via.placeholder.com/64'}
+
+			]}
+		],
 		higlight: false,
 		badgeSrc: 'https://via.placeholder.com/64',
 	},
@@ -41,6 +65,18 @@ export const items = [
 			{category: 'fat', amount: '100g'},
 		],
 		setItem: true,
+		setMenus: [
+			{category: 'sides', items: [
+				{name: 'fries', imageSrc: 'https://via.placeholder.com/64'},
+				{name: 'onion rings', imageSrc: 'https://via.placeholder.com/64'}
+			]},
+			{category: 'drinks', items: [
+				{name: 'cola', imageSrc: 'https://via.placeholder.com/64'},
+				{name: 'orange', imageSrc: 'https://via.placeholder.com/64'},
+				{name: 'coffee', imageSrc: 'https://via.placeholder.com/64'}
+
+			]}
+		],
 		higlight: true,
 		badgeSrc: 'https://via.placeholder.com/64',
 	},
