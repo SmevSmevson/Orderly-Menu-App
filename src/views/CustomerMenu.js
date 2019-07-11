@@ -6,14 +6,19 @@ import CustomerMenuPagination from "../components/customerMenu/CustomerMenuPagin
 import CustomerMenuReceipt from "../components/customerMenu/CustomerMenuReceipt";
 
 import OrderContextProvider from "../ContextProviders/OrderContext";
+import AllergyContextProvider from "../ContextProviders/AllergyContext";
 
 const CustomerMenu = () => {
 
 	return (
         <div className="menu-screen-layout layout-alt-1">
-            <CustomerMenuHeader />
+            <AllergyContextProvider>
+                <CustomerMenuHeader />
+            </AllergyContextProvider>
             <CustomerMenuTabs />
-            <CustomerMenuItemList />
+            <AllergyContextProvider>
+                <CustomerMenuItemList />
+            </AllergyContextProvider>
             <CustomerMenuPagination />
             <OrderContextProvider>
                 <CustomerMenuReceipt />     

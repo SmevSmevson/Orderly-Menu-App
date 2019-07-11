@@ -29,4 +29,9 @@ export const allergies = [
 		name: 'fish',
 		imageSrc: 'https://via.placeholder.com/124',
 	},
+	{
+		id: 6,
+		name: 'dairy',
+		imageSrc: 'https://via.placeholder.com/124',
+	},
 ]

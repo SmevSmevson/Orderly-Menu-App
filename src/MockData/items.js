@@ -32,7 +32,7 @@ export const items = [
 		price: '1300',
 		imageSrc: 'https://via.placeholder.com/256',
 		description: 'lorem',
-		allergies: ['meat'],
+		allergies: ['meat', 'dairy'],
 		nutrition: [
 			{category: 'calories', amount: '500kCal'},
 			{category: 'fat', amount: '100g'},
@@ -59,7 +59,7 @@ export const items = [
 		price: '1400',
 		imageSrc: 'https://via.placeholder.com/256',
 		description: 'lorem',
-		allergies: ['meat'],
+		allergies: ['meat', 'dairy'],
 		nutrition: [
 			{category: 'calories', amount: '500kCal'},
 			{category: 'fat', amount: '100g'},
@@ -101,7 +101,7 @@ export const items = [
 		price: '900',
 		imageSrc: 'https://via.placeholder.com/256',
 		description: 'lorem',
-		allergies: ['meat'],
+		allergies: ['meat', 'dairy'],
 		nutrition: [
 			{category: 'calories', amount: '500kCal'},
 			{category: 'fat', amount: '100g'},
@@ -116,12 +116,54 @@ export const items = [
 		price: '1000',
 		imageSrc: 'https://via.placeholder.com/256',
 		description: 'lorem',
-		allergies: ['meat'],
+		allergies: ['meat', 'dairy'],
 		nutrition: [
 			{category: 'calories', amount: '500kCal'},
 			{category: 'fat', amount: '100g'},
 		],
 		setItem: false,
+		higlight: false,
+		badgeSrc: 'https://via.placeholder.com/64',
+	},
+	{
+		id: 4,
+		name: 'tofuburger',
+		price: '800',
+		imageSrc: 'https://via.placeholder.com/256',
+		description: 'lorem',
+		allergies: [],
+		nutrition: [
+			{category: 'calories', amount: '500kCal'},
+			{category: 'fat', amount: '100g'},
+		],
+		setItem: false,
+		higlight: false,
+		badgeSrc: 'https://via.placeholder.com/64',
+	},
+	{
+		id: 5,
+		name: 'tofuburger set',
+		price: '1000',
+		imageSrc: 'https://via.placeholder.com/256',
+		description: 'lorem',
+		allergies: [],
+		nutrition: [
+			{category: 'calories', amount: '500kCal'},
+			{category: 'fat', amount: '100g'},
+		],
+		setItem: true,
+		setMenus: [
+			{category: 'sides', items: [
+				{name: 'fries', imageSrc: 'https://via.placeholder.com/64'},
+				{name: 'onion rings', imageSrc: 'https://via.placeholder.com/64'}
+			]},
+			{category: 'drinks', items: [
+				{name: 'cola', imageSrc: 'https://via.placeholder.com/64'},
+				{name: 'orange', imageSrc: 'https://via.placeholder.com/64'},
+				{name: 'coffee', imageSrc: 'https://via.placeholder.com/64'}
+
+			]}
+		],
 		higlight: false,
 		badgeSrc: 'https://via.placeholder.com/64',
 	},

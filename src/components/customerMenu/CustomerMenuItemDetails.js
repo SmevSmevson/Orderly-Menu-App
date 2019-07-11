@@ -7,7 +7,7 @@ const CustomerMenuItemDetails = ({ item, editSet }) => {
     let selectedSet = item.setItem ? item.setMenus.map((menu) => {
         return { category: menu.category, setItem: menu.items[0].name}
     }) : null
-    let setContents = null
+    let setContents = selectedSet
     
     const CustomerMenuItemDetailsEvent = () => {
         if(editSet >= 0){
