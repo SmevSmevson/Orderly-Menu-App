@@ -2,7 +2,7 @@ import React, { useContext } from 'react'
 import { navigate } from "@reach/router";
 import { OrderContext } from "../../ContextProviders/OrderContext";
 
-const CustomerMenuItemDetails = ({ item }) => {
+const CustomerMenuItemDetails = ({ item, editSet }) => {
     const { dispatch } = useContext(OrderContext)
     let selectedSet = item.setItem ? item.setMenus.map((menu) => {
         return { category: menu.category, setItem: menu.items[0].name}
@@ -10,8 +10,12 @@ const CustomerMenuItemDetails = ({ item }) => {
     let setContents = null
     
     const CustomerMenuItemDetailsEvent = () => {
-        dispatch({ type: 'ADD_ITEM', order: item })
-        dispatch({ type: 'ADD_SET_ITEMS', id: item.id, setContents: setContents })
+        if(editSet >= 0){
+            dispatch({ type: 'EDIT_SET_ITEMS', id: item.id, setContentsIdx: editSet, setContents: setContents})
+        } else {
+            dispatch({ type: 'ADD_ITEM', order: item })
+            dispatch({ type: 'ADD_SET_ITEMS', id: item.id, setContents: setContents })
+        }
 
         navigate('/customer-menu')
     }

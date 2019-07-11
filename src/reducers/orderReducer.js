@@ -73,6 +73,18 @@ export const orderReducer = (state, action) => {
             return mappedState                                                              //filter out items that have an amount: 0
         }
 
+        case 'EDIT_SET_ITEMS':{
+            //action: {id, setContentsIdx, setContents}}
+            const mappedState = state.map((item) => {                                   //map the array and when the index matches edit the value
+                if(action.id === item.id) {
+                    item.setContents[action.setContentsIdx] = action.setContents        //edit the contents of the setContentsIdx
+                }
+                return item
+            })
+
+            return mappedState
+        }
+
         default:
             return state
     }

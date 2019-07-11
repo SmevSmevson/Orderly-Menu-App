@@ -56,9 +56,23 @@
 
 .confirm-receipt-item-set{
     display: flex;
-    justify-content: space-between;
-    padding: .1em 0;
+    flex-direction: column;
+    padding: .5em 0;
     border-top: 1px dashed darkolivegreen;
+}
+
+.confirm-receipt-item-set-item{
+    display: flex;
+    justify-content: stretch;
+}
+
+.confirm-receipt-item-set-item-category{
+    flex: 1 1 50%;
+    font-style: italic;
+}
+
+.confirm-receipt-item-set-item-name{
+    flex: 1 1 100%;
 }
 
 .confirm-receipt-total{

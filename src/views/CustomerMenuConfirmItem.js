@@ -9,7 +9,7 @@ const CustomerMenuConfirmItem = ({ navigate, location }) => {
         <div className="item-details-screen-layout">
             <CustomerMenuHeader />
             <OrderContextProvider>
-                <CustomerMenuItemDetails item={location.state.item} />
+                <CustomerMenuItemDetails item={location.state.item} editSet={location.state.editSet} />
             </OrderContextProvider>
         </div>
 	)
