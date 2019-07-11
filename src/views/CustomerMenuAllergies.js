@@ -8,8 +8,8 @@ import AllergyContextProvider from '../ContextProviders/AllergyContext';
 const CustomerMenuAllergies = () => {
 	return (
         <div className="allergy-screen-layout layout-alt-1">
+            <CustomerMenuHeader />
             <AllergyContextProvider>
-                <CustomerMenuHeader />
                 <CustomerMenuAllergyList />
             </AllergyContextProvider>
         </div>

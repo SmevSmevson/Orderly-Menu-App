@@ -12,9 +12,7 @@ const CustomerMenu = () => {
 
 	return (
         <div className="menu-screen-layout layout-alt-1">
-            <AllergyContextProvider>
-                <CustomerMenuHeader />
-            </AllergyContextProvider>
+            <CustomerMenuHeader />
             <CustomerMenuTabs />
             <AllergyContextProvider>
                 <CustomerMenuItemList />
