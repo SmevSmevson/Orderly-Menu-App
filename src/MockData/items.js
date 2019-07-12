@@ -1,4 +1,7 @@
 export const items = [
+	// just creating some mock data id rules so we don't create duplicate ids (hopefully)
+	// ids will be automated in the futute
+	//mains ids 0 - 99
 	{
 		id: 0,
 		name: 'hamburger set',
@@ -13,14 +16,13 @@ export const items = [
 		setItem: true,
 		setMenus: [
 			{category: 'sides', items: [
-				{name: 'fries', imageSrc: 'https://via.placeholder.com/64'},
-				{name: 'onion rings', imageSrc: 'https://via.placeholder.com/64'}
+				100,
+				101
 			]},
 			{category: 'drinks', items: [
-				{name: 'cola', imageSrc: 'https://via.placeholder.com/64'},
-				{name: 'orange', imageSrc: 'https://via.placeholder.com/64'},
-				{name: 'coffee', imageSrc: 'https://via.placeholder.com/64'}
-
+				300,
+				301,
+				302
 			]}
 		],
 		higlight: false,
@@ -40,14 +42,13 @@ export const items = [
 		setItem: true,
 		setMenus: [
 			{category: 'sides', items: [
-				{name: 'fries', imageSrc: 'https://via.placeholder.com/64'},
-				{name: 'onion rings', imageSrc: 'https://via.placeholder.com/64'}
+				100,
+				101
 			]},
 			{category: 'drinks', items: [
-				{name: 'cola', imageSrc: 'https://via.placeholder.com/64'},
-				{name: 'orange', imageSrc: 'https://via.placeholder.com/64'},
-				{name: 'coffee', imageSrc: 'https://via.placeholder.com/64'}
-
+				300,
+				301,
+				302
 			]}
 		],
 		higlight: false,
@@ -67,14 +68,13 @@ export const items = [
 		setItem: true,
 		setMenus: [
 			{category: 'sides', items: [
-				{name: 'fries', imageSrc: 'https://via.placeholder.com/64'},
-				{name: 'onion rings', imageSrc: 'https://via.placeholder.com/64'}
+				100,
+				101
 			]},
 			{category: 'drinks', items: [
-				{name: 'cola', imageSrc: 'https://via.placeholder.com/64'},
-				{name: 'orange', imageSrc: 'https://via.placeholder.com/64'},
-				{name: 'coffee', imageSrc: 'https://via.placeholder.com/64'}
-
+				300,
+				301,
+				302
 			]}
 		],
 		higlight: true,
@@ -154,17 +154,89 @@ export const items = [
 		setItem: true,
 		setMenus: [
 			{category: 'sides', items: [
-				{name: 'fries', imageSrc: 'https://via.placeholder.com/64'},
-				{name: 'onion rings', imageSrc: 'https://via.placeholder.com/64'}
+				100,
+				101
 			]},
 			{category: 'drinks', items: [
-				{name: 'cola', imageSrc: 'https://via.placeholder.com/64'},
-				{name: 'orange', imageSrc: 'https://via.placeholder.com/64'},
-				{name: 'coffee', imageSrc: 'https://via.placeholder.com/64'}
-
+				300,
+				301,
+				302
 			]}
 		],
 		higlight: false,
 		badgeSrc: 'https://via.placeholder.com/64',
+	},
+	//sides ids 100-199
+	{
+		id: 100,
+		name: 'fries',
+		price: '250',
+		imageSrc: 'https://via.placeholder.com/256',
+		description: 'lorem',
+		allergies: [],
+		nutrition: [
+			{category: 'calories', amount: '50kCal'},
+			{category: 'fat', amount: '10g'},
+		],
+		setItem: false,
+		higlight: false,
+	},
+	{
+		id: 101,
+		name: 'onion rings',
+		price: '250',
+		imageSrc: 'https://via.placeholder.com/256',
+		description: 'lorem',
+		allergies: [],
+		nutrition: [
+			{category: 'calories', amount: '50kCal'},
+			{category: 'fat', amount: '10g'},
+		],
+		setItem: false,
+		higlight: false,
+	},
+	//desserts ids 200-299
+	//drinks ids 300-399
+	{
+		id: 300,
+		name: 'cola',
+		price: '250',
+		imageSrc: 'https://via.placeholder.com/256',
+		description: 'lorem',
+		allergies: [],
+		nutrition: [
+			{category: 'calories', amount: '50kCal'},
+			{category: 'fat', amount: '10g'},
+		],
+		setItem: false,
+		higlight: false,
+	},
+	{
+		id: 301,
+		name: 'orange',
+		price: '250',
+		imageSrc: 'https://via.placeholder.com/256',
+		description: 'lorem',
+		allergies: [],
+		nutrition: [
+			{category: 'calories', amount: '50kCal'},
+			{category: 'fat', amount: '10g'},
+		],
+		setItem: false,
+		higlight: false,
+	},
+	{
+		id: 302,
+		name: 'coffee',
+		price: '250',
+		imageSrc: 'https://via.placeholder.com/256',
+		description: 'lorem',
+		allergies: [],
+		nutrition: [
+			{category: 'calories', amount: '50kCal'},
+			{category: 'fat', amount: '10g'},
+		],
+		setItem: false,
+		higlight: false,
 	},
 ]

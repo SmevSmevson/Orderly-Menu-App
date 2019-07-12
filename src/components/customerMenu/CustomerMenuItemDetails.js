@@ -2,6 +2,8 @@ import React, { useContext } from 'react'
 import { navigate } from "@reach/router";
 import { OrderContext } from "../../ContextProviders/OrderContext";
 
+import { items } from "../../MockData/items";
+
 const CustomerMenuItemDetails = ({ item, editSet }) => {
     const { dispatch } = useContext(OrderContext)
     let selectedSet = item.setItem ? item.setMenus.map((menu) => {
@@ -27,6 +29,14 @@ const CustomerMenuItemDetails = ({ item, editSet }) => {
             }
             return set
         })
+    }
+
+    //compares an array of ids to the list of all items and filters out any that arent equal
+    const getItemsFromIds = (ids) => {
+        const filteredItems = items.filter(mockItem => {
+            return ids.findIndex(id => id === mockItem.id)>=0
+        })
+        return filteredItems
     }
 
 	return (
@@ -61,7 +71,7 @@ const CustomerMenuItemDetails = ({ item, editSet }) => {
                             <div key={menu.category}>
                                 <div>{ menu.category }</div>
                                 {
-                                    menu.items.map(setItem => {
+                                    getItemsFromIds(menu.items).map(setItem => {
                                         return (
                                             <div key={setItem.name}>
                                                 <img src={setItem.imageSrc} alt={setItem.name}/>
