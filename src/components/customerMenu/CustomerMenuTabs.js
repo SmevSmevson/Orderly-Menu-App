@@ -1,16 +1,26 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import { MenuContext } from '../../ContextProviders/MenuContext'
+
+import { menus } from "../../MockData/menus"
 
 const CustomerMenuTabs = () => {
+    const { menu, dispatch } = useContext(MenuContext)
+
+    const setMenu = (menu) => {
+        dispatch({type: 'SET_MENU', menu: menu})
+    }
+
+    const isSelected = (id) => {
+        return id === menu.id ? 'allergy-selected' : ''
+    }
+
 	return (
         <div className="menu-nav-container">
-            <div>tab 1</div>
-            <div>tab 2</div>
-            <div>tab 3</div>
-            <div>tab 4</div>
-            <div>tab 5</div>
-            <div>tab 6</div>
-            <div>tab 7</div>
-            <div>tab 8</div>
+            {menus.map(menu => {
+                return (
+                    <div className={isSelected(menu.id)} onClick={() => setMenu(menu)}>{ menu.name }</div>
+                )
+            })}
         </div>
 	)
 }

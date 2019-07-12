@@ -5,6 +5,7 @@ import CustomerMenuItemList from "../components/customerMenu/CustomerMenuItemLis
 import CustomerMenuPagination from "../components/customerMenu/CustomerMenuPagination";
 import CustomerMenuReceipt from "../components/customerMenu/CustomerMenuReceipt";
 
+import MenuContextProvider from "../ContextProviders/MenuContext";
 import OrderContextProvider from "../ContextProviders/OrderContext";
 import AllergyContextProvider from "../ContextProviders/AllergyContext";
 
@@ -13,10 +14,12 @@ const CustomerMenu = () => {
 	return (
         <div className="menu-screen-layout layout-alt-1">
             <CustomerMenuHeader />
-            <CustomerMenuTabs />
-            <AllergyContextProvider>
-                <CustomerMenuItemList />
-            </AllergyContextProvider>
+            <MenuContextProvider>
+                <CustomerMenuTabs />
+                <AllergyContextProvider>
+                    <CustomerMenuItemList />
+                </AllergyContextProvider>
+            </MenuContextProvider>
             <CustomerMenuPagination />
             <OrderContextProvider>
                 <CustomerMenuReceipt />     

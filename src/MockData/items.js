@@ -126,7 +126,7 @@ export const items = [
 		badgeSrc: 'https://via.placeholder.com/64',
 	},
 	{
-		id: 4,
+		id: 6,
 		name: 'tofuburger',
 		price: '800',
 		imageSrc: 'https://via.placeholder.com/256',
@@ -141,7 +141,7 @@ export const items = [
 		badgeSrc: 'https://via.placeholder.com/64',
 	},
 	{
-		id: 5,
+		id: 7,
 		name: 'tofuburger set',
 		price: '1000',
 		imageSrc: 'https://via.placeholder.com/256',
