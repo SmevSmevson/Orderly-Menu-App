@@ -2,7 +2,7 @@ import React from 'react'
 import CustomerMenuHeader from "../components/customerMenu/CustomerMenuHeader";
 import CustomerMenuTabs from "../components/customerMenu/CustomerMenuTabs";
 import CustomerMenuItemList from "../components/customerMenu/CustomerMenuItemList";
-import CustomerMenuPagination from "../components/customerMenu/CustomerMenuPagination";
+// import CustomerMenuPagination from "../components/customerMenu/CustomerMenuPagination";
 import CustomerMenuReceipt from "../components/customerMenu/CustomerMenuReceipt";
 
 import MenuContextProvider from "../ContextProviders/MenuContext";
@@ -13,14 +13,14 @@ const CustomerMenu = () => {
 
 	return (
         <div className="menu-screen-layout layout-alt-1">
-            <CustomerMenuHeader />
-            <MenuContextProvider>
-                <CustomerMenuTabs />
-                <AllergyContextProvider>
+            <AllergyContextProvider>
+                <CustomerMenuHeader />
+                <MenuContextProvider>
+                    <CustomerMenuTabs />
                     <CustomerMenuItemList />
-                </AllergyContextProvider>
-            </MenuContextProvider>
-            <CustomerMenuPagination />
+                </MenuContextProvider>
+            </AllergyContextProvider>
+            {/* <CustomerMenuPagination /> */}
             <OrderContextProvider>
                 <CustomerMenuReceipt />     
             </OrderContextProvider>

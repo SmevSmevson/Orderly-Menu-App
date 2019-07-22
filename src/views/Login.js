@@ -1,12 +1,17 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import { CSSVarsContext } from '../ContextProviders/CSSVarsContext'
 
 const Login = ({ navigate }) => {
+	const context = useContext(CSSVarsContext)
+
 	const loginEvent = () => {
 		navigate(`/menu-selection`)
 	}
 
 	return (
-		<div id="login-container">
+		<div id="login-container" className="login-container" 
+			onClick={(e) => { context.getElementCSSVars(e) }}
+		>
 			<div className="login-form">
 				<label className="acc-label" htmlFor="account-name">
 					account name

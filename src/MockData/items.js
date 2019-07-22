@@ -26,14 +26,14 @@ export const items = [
 			]}
 		],
 		higlight: false,
-		badgeSrc: 'https://via.placeholder.com/64',
+		badgeSrc: '',
 	},
 	{
 		id: 1,
 		name: 'cheeseburger set',
 		price: '1300',
 		imageSrc: 'https://via.placeholder.com/256',
-		description: 'lorem',
+		description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis doloribus eaque reiciendis eligendi ipsum consequatur nam. Labore beatae quaerat, facere nemo facilis ad quibusdam amet, mollitia tenetur possimus, ipsum molestias.',
 		allergies: ['meat', 'dairy'],
 		nutrition: [
 			{category: 'calories', amount: '500kCal'},

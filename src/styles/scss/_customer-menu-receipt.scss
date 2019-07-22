@@ -1,0 +1,23 @@
+.menu-receipt{
+    &-container{
+        display: flex;
+        flex-direction: column;
+        border: 1px solid #ccc;
+        border-radius: .3rem;
+        height: 100%;
+    }
+
+    &-btn-order{
+        @include button-variant(
+            var(--receipt-order-btn-text-color, #333),
+            var(--receipt-order-btn-bg-color, #ccc),
+            var(--receipt-order-btn-hover-bg-color, #ddd),
+            var(--receipt-order-btn-pressed-bg-color, #bbb),
+            1px solid var(--receipt-order-btn-border-color, #bbb)    
+        );
+        padding: 1.5rem 0;
+        border-radius: 0;
+        font-size: 1.5em;
+        letter-spacing: .1ch;
+    }
+}

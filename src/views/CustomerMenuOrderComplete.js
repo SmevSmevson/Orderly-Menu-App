@@ -3,12 +3,12 @@ import React from 'react'
 const CustomerMenuOrderComplete = () => {
 
 	return (
-        <div className="confirm-screen-layout">
-            <div className="confirm-receipt-container">
-                <h3 className="confirm-receipt-title">
+        <div className="complete-screen-layout">
+            <div className="complete-receipt-container">
+                <h3 className="complete-receipt-title">
                     Your Order should be with you shortly.
                 </h3>
-                <div>
+                <div className="complete-receipt-sub-title">
                     Have a nice day.
                 </div>
             </div>

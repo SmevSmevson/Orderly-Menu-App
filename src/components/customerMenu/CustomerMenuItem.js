@@ -8,11 +8,11 @@ const CustomerMenuItem = ({item}) => {
     }
     
 	return (
-        <div onClick={CustomerMenuItemEvent} className={item.higlight?"menu-item menu-item-highlight":"menu-item"}>
-            <img className="menu-item-badge" src={item.badgeSrc} alt="" />
+        <div onClick={CustomerMenuItemEvent} className={`menu-item  ${item.higlight?'menu-item-highlight':''}`}>
+            {item.badgeSrc? <img className="menu-item-badge" src={item.badgeSrc} alt="" />:''}
             <img className="menu-item-image" src={item.imageSrc} alt="" />
-            <span><strong>{item.name}</strong></span>
-            <span>{item.price}</span>
+            <span className="menu-item-name">{item.name}</span>
+            <span className="menu-item-price">{item.price}</span>
         </div>
 	)
 }

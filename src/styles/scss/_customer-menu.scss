@@ -2,8 +2,10 @@
 .menu-screen-layout{
     display: grid;
     place-items: stretch;
-    height: 100vh;
+    height: calc(100vh - 2rem);
+    padding: 1rem;
 
+    grid-gap: 1rem;
     grid-template-columns: 3fr 1fr;
     grid-template-rows: 4em 4em 1fr 4em;
     grid-template-areas: 
@@ -18,80 +20,19 @@
     "sch sch"
     "nav rcpt"
     "mnu rcpt"
-    "pag rcpt"
-}
-
-.menu-screen-layout>*{
-    border: 1px darkgray solid;
+    "mnu rcpt"
 }
 
 .menu-search-container{
     grid-area: sch;
-
-    display: grid;
-    place-items: stretch;
-    grid-template-columns: 1fr 4fr 1fr;
 }
 
 .menu-nav-container{
     grid-area: nav;
-
-    display: grid;
-    grid-auto-columns: auto;
-    grid-auto-flow: column;
 }
 
-.menu-nav-container>*{
-    border: 1px darkgoldenrod solid;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.menu-item-container{
+.menu-item-list-container{
     grid-area: mnu;
-    padding: 1em;
-
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(3, 1fr);
-    grid-auto-flow: dense;
-    grid-gap: 1em;
-
-    overflow: scroll;
-
-}
-
-.menu-item-container>*{
-    border: 1px darkblue solid;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-}
-
-.menu-item{
-    position: relative;
-}
-
-.menu-item-highlight{
-    grid-column: auto / span 2;
-    grid-row: auto / span 2
-}
-
-.menu-item-badge{
-    position: absolute;
-    top: -5px;
-    left: -5px;
-    width: 40px;
-    height: 40px;
-    background-color: #eee
-}
-
-.menu-item-image {
-	width: 100%;
-	height: 75%;
-	object-fit: cover;
 }
 
 .menu-pagination-container{
@@ -100,66 +41,6 @@
 
 .menu-receipt-container{
     grid-area: rcpt;
-
-    display: flex;
-    flex-direction: column;
-}
-
-.menu-receipt-item{
-    position: relative;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-between;
-    padding: 1em .5em 1em 1.5em;
-    border: 1px dashed darkolivegreen;
-}
-
-.menu-receipt-item-cancel{
-    position: absolute;
-    top:0;
-    left: 0;
-    bottom: 0;
-    padding: 0;
-}
-
-.menu-receipt-item-name{
-    font-style: italic;
-    font-weight: 900;
-}
-
-.menu-receipt-item-amount{
-    width: 1em;
-}
-
-.menu-receipt-item-set-container{
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    padding-top: 1em;
-}
-
-.menu-receipt-item-set{
-    display: flex;
-    justify-content: space-between;
-    padding: .1em 0;
-    border-top: 1px dashed darkolivegreen;
-}
-
-.menu-receipt-total{
-    margin-top: auto;
-
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    padding: 1em .5em 1em 1.5em;
-    border: 1px dashed darkolivegreen;
-}
-
-.menu-receipt-item-total{
-    color: darkgreen;
-    font-weight: 900;
-    letter-spacing: .2ch;
 }
 
 .menu-receipt-order{

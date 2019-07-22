@@ -22,39 +22,47 @@ const CustomerMenuRecieptItem = ({item, dispatch, showImg}) => {
     }
 
 	return (
-        <div className="confirm-receipt-item">
-            <button onClick={ removeItem } className="confirm-receipt-item-cancel">x</button>
+        <div className="menu-receipt-item">
+            <button onClick={ removeItem } className="menu-receipt-item-cancel">x</button>
             {showImg
-                ?<img className="confirm-receipt-item-img" src={item.imageSrc} alt="" />
+                ?<img className="menu-receipt-item-img" src={item.imageSrc} alt="" />
                 :''
             }
-            <span className="confirm-receipt-item-name">{ item.name }</span>
-            <button onClick={ subtractItem }>-</button>
-            <input className="confirm-receipt-item-amount" type="text" value={item.amount}/>
-            <button onClick={ addItem }>+</button>
+            <span className="menu-receipt-item-name">{ item.name }</span>
+            <div className="menu-receipt-item-amount-container">
+                <button className="menu-receipt-item-amount-subtract" onClick={ subtractItem }>-</button>
+                <div className="menu-receipt-item-amount">{item.amount}</div>
+                <button className="menu-receipt-item-amount-add" onClick={ addItem }>+</button>
+            </div>
+            <span>x</span>
             <span>{ item.price }</span>
 
-            {/* TODO need a better way to do this part */}
-            {/* order => selectedSet[index][{category,itemName}] */}
             {item.setItem?
-                <div className="confirm-receipt-item-set-container">
+                <div className="menu-receipt-item-set-container">
                     {item.setContents.map((contents, index) => {
                         return (
-                            <div className="confirm-receipt-item-set" key={index}>
+                            <div className="menu-receipt-item-set" key={index}>
                                 {
                                     contents.map(item => {
                                         return (
-                                            <div className="confirm-receipt-item-set-item" key={item.category}>
-                                                <div className="confirm-receipt-item-set-item-category">{item.category}:</div>
-                                                <div className="confirm-receipt-item-set-item-name">{item.setItem}</div>
+                                            <div className="menu-receipt-item-set-item" key={item.category + index}>
+                                                <div className="menu-receipt-item-set-item-category">{item.category}:</div>
+                                                <div className="menu-receipt-item-set-item-name">{item.setItem}</div>
                                             </div>
                                         )
                                     })
                                 }
-                                <button onClick={ () => editSetItem(index) }>change</button>
+                                <button className="menu-receipt-item-set-change-btn" onClick={ () => editSetItem(index) }>change</button>
                             </div>
                         )
                     })}
+                </div>
+            :''}
+            {/* TODO in the future we may have set items with added cost so subtotal is displayed here */}
+            {item.amount > 1 ? 
+                <div className="menu-receipt-item-subtotal">
+                    <span className="menu-receipt-item-subtotal-title">subtotal:</span>
+                    <span className="menu-receipt-item-subtotal-value">{ item.price * item.amount }</span>
                 </div>
             :''}
         </div>

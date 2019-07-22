@@ -1,0 +1,25 @@
+.menu-nav{
+
+    &-container{
+        display: grid;
+        grid-auto-columns: auto;
+        grid-auto-flow: column;
+    }
+
+    &-tab{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid #bbb;
+        border-bottom: 1px solid #ccc;
+        border-radius: .3rem .3rem 0 0;
+        background-color: #eee;
+
+        &-selected{
+            background-color: #fff;
+            border-bottom: 1px solid #fff;
+            font-weight: bold;
+        }
+    }
+
+}

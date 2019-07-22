@@ -11,7 +11,7 @@ const CustomerMenuItemDetails = ({ item, editSet }) => {
     }) : null
     let setContents = selectedSet
     
-    const CustomerMenuItemDetailsEvent = () => {
+    const addItem = () => {
         if(editSet >= 0){
             dispatch({ type: 'EDIT_SET_ITEMS', id: item.id, setContentsIdx: editSet, setContents: setContents})
         } else {
@@ -22,10 +22,14 @@ const CustomerMenuItemDetails = ({ item, editSet }) => {
         navigate('/customer-menu')
     }
 
+    const cancelItem = () => {
+        navigate('/customer-menu')
+    }
+
     const setSetItem = (e) => {        
         setContents = selectedSet.map(set => {
-            if(e.target.name === set.category) {
-                set.setItem = e.target.id
+            if(e.currentTarget.title === set.category) {
+                set.setItem = e.currentTarget.id
             }
             return set
         })
@@ -42,10 +46,12 @@ const CustomerMenuItemDetails = ({ item, editSet }) => {
 	return (
         <div className="item-details-container">
             <div className="item-details item-details-alt-1">
-                <img className="item-details-badge" src="#" alt="" />
-                <img className="item-details-img" src="#" alt="" />
-                <span className="item-details-name"><strong>{item.name}</strong></span>
-                <span className="item-details-price">{item.price}</span>
+                {item.badgeSrc?<img className="item-details-badge" src={item.badgeSrc} alt="" />:''}
+                <div className="item-details-img-container">
+                    <img className="item-details-img" src={item.imageSrc} alt="" />
+                    <span className="item-details-name"><strong>{item.name}</strong></span>
+                    <span className="item-details-price">{item.price}</span>
+                </div>
                 <div className="item-details-nutritional-info">
                     {item.nutrition.map(info => {
                         return (
@@ -58,34 +64,41 @@ const CustomerMenuItemDetails = ({ item, editSet }) => {
                 <div className="item-details-allergies">
                     {item.allergies.map(allergy => {
                         return (
-                            <div key={allergy}>
+                            <div className="item-details-allergy" key={allergy}>
                                 <img className="item-details-allergy-icon" src="#" alt="" title="allergy"/>
-                                <div>{ allergy }</div>
+                                <div className="item-details-allergy-name">{ allergy }</div>
                             </div>
                         )
                     })}
                 </div>
-                {!item.setItem?'':
-                    item.setMenus.map((menu) => {
-                        return (
-                            <div key={menu.category}>
-                                <div>{ menu.category }</div>
-                                {
-                                    getItemsFromIds(menu.items).map(setItem => {
-                                        return (
-                                            <div key={setItem.name}>
-                                                <img src={setItem.imageSrc} alt={setItem.name}/>
-                                                <input type="radio" name={menu.category} id={setItem.name} onClick={setSetItem}/>
-                                                <div>{ setItem.name }</div>
-                                            </div>
-                                        )
-                                    })
-                                }
-                            </div>
-                        )
-                    })
-                }
-                <button onClick={CustomerMenuItemDetailsEvent} className="item-details-add-btn">add to order</button>
+                <div className="item-details-set-selection-container">
+                    {!item.setItem?'':
+                        item.setMenus.map((menu) => {
+                            return (
+                                <div className="item-details-set-selection-category-section" key={menu.category}>
+                                    <div className="item-details-set-selection-category">{ menu.category }</div>
+                                    <div className="item-details-set-item-list-container">
+                                        {
+                                            getItemsFromIds(menu.items).map(setItem => {
+                                                return (
+                                                    <>
+                                                    <input className="item-details-set-item-radio" type="radio" name={menu.category} id={setItem.name}/>
+                                                    <label className="item-details-set-item" key={setItem.name} htmlFor={setItem.name} id={setItem.name} title={menu.category} onClick={setSetItem}>
+                                                        <img className="item-details-set-item-image" src={setItem.imageSrc} alt={setItem.name}/>
+                                                        <div className="item-details-set-item-name">{ setItem.name }</div>
+                                                    </label>
+                                                    </>
+                                                )
+                                            })
+                                        }
+                                    </div>
+                                </div>
+                            )
+                        })
+                    }
+                </div>
+                <button onClick={cancelItem} className="item-details-cancel-btn">cancel</button>
+                <button onClick={addItem} className="item-details-add-btn">add to order</button>
             </div>
         </div>
 	)

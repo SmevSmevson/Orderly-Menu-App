@@ -8,9 +8,9 @@ const CustomerMenuRecieptTotal = () => {
     }, 0)
 	
 	return (
-        <div className="confirm-receipt-total">
-            <span className="confirm-receipt-item-name">total</span>
-            <span className="confirm-receipt-item-total">{total}</span>
+        <div className="menu-receipt-total">
+            <span className="menu-receipt-total-label">total</span>
+            <span className="menu-receipt-total-value">{total}</span>
         </div>
 	)
 }

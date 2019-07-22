@@ -13,8 +13,7 @@ export const allergyReducer = (state, action) => {
             return state
         }
         case 'REMOVE_ALL_ALLERGIES': {
-            console.log('TODO remove all allergies')
-            return state
+            return []
         }
         default : 
             return state

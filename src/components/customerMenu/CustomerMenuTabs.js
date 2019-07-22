@@ -11,14 +11,14 @@ const CustomerMenuTabs = () => {
     }
 
     const isSelected = (id) => {
-        return id === menu.id ? 'allergy-selected' : ''
+        return id === menu.id ? 'menu-nav-tab-selected' : ''
     }
 
 	return (
         <div className="menu-nav-container">
             {menus.map(menu => {
                 return (
-                    <div className={isSelected(menu.id)} onClick={() => setMenu(menu)}>{ menu.name }</div>
+                    <div key={menu.id} className={`menu-nav-tab ${isSelected(menu.id)}`} onClick={() => setMenu(menu)}>{ menu.name }</div>
                 )
             })}
         </div>

@@ -5,7 +5,7 @@ import { AllergyContext } from "../../ContextProviders/AllergyContext"
 const CustomerMenuAllergy = ({ allergy }) => {    
     const { allergies, dispatch } = useContext(AllergyContext)
 
-    const toggleAllergy = (e) => {
+    const toggleAllergy = () => {
         dispatch({ type: 'TOGGLE_ALLERGY', allergy: allergy })
     }
 
@@ -16,7 +16,7 @@ const CustomerMenuAllergy = ({ allergy }) => {
 	return (
         <div className={isSelectedAllergy()>=0?"allergy allergy-selected":"allergy"} onClick={toggleAllergy}>
             <img className="allergy-icon" src={allergy.imageSrc} alt="" />
-            <span><strong>{allergy.name}</strong></span>
+            <div className="allergy-name">{allergy.name}</div>
         </div>
 	)
 }

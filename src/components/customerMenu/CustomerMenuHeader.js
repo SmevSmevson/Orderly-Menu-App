@@ -1,10 +1,11 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { navigate } from '@reach/router'
-import AllergyContextProvider  from '../../ContextProviders/AllergyContext'
-import CustomerMenuHeaderAllergyCounter from './CustomerMenuHeaderAllergyCounter'
+import { AllergyContext }  from '../../ContextProviders/AllergyContext';
 
 
 const CustomerMenuHeader = () => {
+	const { allergies } = useContext(AllergyContext)
+
 	const CustomerMenuHeaderEvent = () => {
 		if(window.location.pathname === `/customer-menu/allergies`) {
 			navigate(`/customer-menu`)
@@ -14,12 +15,10 @@ const CustomerMenuHeader = () => {
 	}
 	return (
 		<div className="menu-search-container">
-			<button className="btn-staff">call staff</button>
-			<input className="input-search" type="text" placeholder="search..." />
-			<button onClick={CustomerMenuHeaderEvent} className="btn-allergies">
-				<AllergyContextProvider>
-					<CustomerMenuHeaderAllergyCounter/>
-				</AllergyContextProvider>
+			<button className="menu-search-btn-staff">call staff</button>
+			<input className="menu-search-input-search" type="text" placeholder="search..." />
+			<button onClick={CustomerMenuHeaderEvent} className="menu-search-btn-allergies">
+				<span>allergies: {allergies.length}</span>
 			</button>
 		</div>
 	)

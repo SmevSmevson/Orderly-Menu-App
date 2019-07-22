@@ -26,7 +26,7 @@ const CustomerMenuItemList = () => {
     })
     
 	return (
-        <div className="menu-item-container">
+        <div className="menu-item-list-container">
             {
                 filteredItems.map((item, index) => {
                     return <CustomerMenuItem key={item.id} item={item}/>

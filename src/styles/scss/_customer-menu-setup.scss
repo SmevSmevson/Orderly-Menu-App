@@ -1,16 +1,26 @@
 .setup-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--setup-body-bg-color, #fff);
+}
+
+.setup-form{
     width: 50vw;
     height: 50vh;
     margin: 20vh 20vw;
     padding: 5vh 5vw;
     border: 1px grey solid;
-    background-color: bisque;
+    border-radius: .3rem;
+    background-color: var(--setup-card-bg-color, #eee);
 
     display: grid;
     place-items: stretch;;
 
+    grid-gap: 2em;
     grid-template-columns: 1fr 1fr;
-    grid-gap: 1em;
     grid-template-areas: 
     "tbll tbl"
     "bck don"
@@ -21,14 +31,29 @@
     place-self: center end;
 }
 
-.tabel-input{
+.table-input{
     grid-area: tbl;
+    @include input-default();
 }
 
 .btn-back{
     grid-area: bck;
+    @include button-variant(
+        var(--setup-back-btn-text-color, #333),
+        var(--setup-back-btn-bg-color, #ccc),
+        var(--setup-back-btn-hover-bg-color, #ddd),
+        var(--setup-back-btn-pressed-bg-color, #bbb),
+        1px solid var(--setup-back-btn-border-color, #bbb)    
+    );
 }
 
 .btn-done{
     grid-area: don;
+    @include button-variant(
+        var(--setup-done-btn-text-color, #333),
+        var(--setup-done-btn-bg-color, #ccc),
+        var(--setup-done-btn-hover-bg-color, #ddd),
+        var(--setup-done-btn-pressed-bg-color, #bbb),
+        1px solid var(--setup-done-btn-border-color, #bbb)    
+    );
 }

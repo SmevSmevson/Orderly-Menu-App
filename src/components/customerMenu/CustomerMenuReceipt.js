@@ -10,10 +10,9 @@ const CustomerMenuReceipt = () => {
     
 	return (
         <div className="menu-receipt-container">
-            selected items
             <CustomerMenuRecieptItemList showImg={false} />
             <CustomerMenuRecieptTotal />
-            <button onClick={CustomerMenuReceiptEvent} className="menu-receipt-order">order</button>
+            <button onClick={CustomerMenuReceiptEvent} className="menu-receipt-btn-order">order</button>
         </div>
 	)
 }

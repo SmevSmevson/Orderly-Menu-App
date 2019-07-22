@@ -1,102 +1,62 @@
 .confirm-screen-layout {
-    height: 90vh;
+    height: calc(100vh - 2rem);
     width: 80vw;
-    margin: 5vh auto;
-    border: 5px double darkslateblue;
-
+    margin: 1rem auto;
 }
+
 .confirm-receipt-container{
     display: flex;
     flex-direction: column;
+    border: 1px solid #ccc;
+    border-radius: .3rem;
     height: 100%;
+    overflow: hidden;
 }
 
 .confirm-receipt-title{
     text-align: center;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 1rem;
+    margin-bottom: 0;
 }
 
-.confirm-receipt-item{
-    position: relative;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-between;
-    padding: 1em .5em 1em 1.5em;
-    border: 1px dashed darkolivegreen;
-}
-
-.confirm-receipt-item-cancel{
-    position: absolute;
-    top:0;
-    left: 0;
-    bottom: 0;
-    padding: 0;
-}
-
-.confirm-receipt-item-img{
-    width: 80px;
-    height: 80px;
-}
-
-.confirm-receipt-item-name{
-    font-style: italic;
-    font-weight: 900;
-}
-
-.confirm-receipt-item-amount{
-    width: 1em;
-}
-
-.confirm-receipt-item-set-container{
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    padding-top: 1em;
-}
-
-.confirm-receipt-item-set{
-    display: flex;
-    flex-direction: column;
-    padding: .5em 0;
-    border-top: 1px dashed darkolivegreen;
-}
-
-.confirm-receipt-item-set-item{
-    display: flex;
-    justify-content: stretch;
-}
-
-.confirm-receipt-item-set-item-category{
-    flex: 1 1 50%;
-    font-style: italic;
-}
-
-.confirm-receipt-item-set-item-name{
-    flex: 1 1 100%;
-}
-
-.confirm-receipt-total{
-    margin-top: auto;
-
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    padding: 1em .5em 1em 1.5em;
-    border: 1px dashed darkolivegreen;
-}
-
-.confirm-receipt-item-total{
-    color: darkgreen;
-    font-weight: 900;
-    letter-spacing: .2ch;
-}
+// displayed items and totals are the same at the reciept
+// they use styles from the following files
+// _customer-menu-receipt-item-list
+// _customer-menu-receipt-item
+// _customer-menu-receipt-total
 
 .confirm-receipt-buttons-container {
     display: flex;
     justify-content: stretch;
 }
 
-.confirm-receipt-order, .confirm-receipt-back{
-    height: 6em;
-    flex: 1 0 auto;;
+.confirm-receipt-back{
+    @include button-variant(
+        var(--reciept-back-btn-text-color, #333),
+        var(--reciept-back-btn-bg-color, #ccc),
+        var(--reciept-back-btn-hover-bg-color, #ddd),
+        var(--reciept-back-btn-pressed-bg-color, #bbb),
+        1px solid var(--reciept-back-btn-border-color, #bbb)    
+    );
+    font-size: 1.5em;
+    letter-spacing: .1ch;
+    height: 6rem;
+    flex: 1 0 auto;
+    border-radius: 0;
+}
+
+.confirm-receipt-order{
+    @include button-variant(
+        var(--reciept-order-btn-text-color, #333),
+        var(--reciept-order-btn-bg-color, #ccc),
+        var(--reciept-order-btn-hover-bg-color, #ddd),
+        var(--reciept-order-btn-pressed-bg-color, #bbb),
+        1px solid var(--reciept-order-btn-border-color, #bbb)    
+    );
+    font-size: 1.5em;
+    letter-spacing: .1ch;
+    height: 6rem;
+    flex: 1 0 auto;
+    border-radius: 0;
 }

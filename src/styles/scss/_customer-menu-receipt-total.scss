@@ -1,0 +1,21 @@
+.menu-receipt-total {
+    margin-top: auto;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em .5em 1em 1.5em;
+    background-color: #aaa;
+    color: #eee;
+
+    &-label{
+        font-style: italic;
+    }
+
+    &-value{
+        color: #fff;
+        font-weight: bold;
+        letter-spacing: .2ch;
+        font-size: 1.25em;
+    }
+}

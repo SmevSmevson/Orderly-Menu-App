@@ -34,9 +34,7 @@ const CSSVarsContextProvider = (props) => {
 	
 	// works in chrome and safari and firefox
 	function getElementCSSVars(event) {
-		console.log(event.currentTarget)
 		setNode(event.currentTarget)
-		console.log('currentNode', node)
 		if (navigator.userAgent.indexOf('Chrome') !== -1) {
 			let cssVars = []
 			Object.keys(document.styleSheets).forEach((key) => {
@@ -58,7 +56,6 @@ const CSSVarsContextProvider = (props) => {
 				)
 				cssVars = parseCSSVarsFromRules(matchedNodeSelectorRules)
 			})
-            console.log('cssVars: ', cssVars)
             setCustomVars(cssVars)
 			return cssVars
 		} else {
@@ -73,7 +70,6 @@ const CSSVarsContextProvider = (props) => {
 				}
 				return acc
 			}, [])
-            console.log('cssVars: ', cssVars)
             setCustomVars(cssVars)
 			return cssVars
 		}

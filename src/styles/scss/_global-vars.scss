@@ -6,4 +6,13 @@
 
     // use --G-{var name} when the variable is used in more then one component
     --G-header-font-family: 'Josefin Sans', sans-serif;
+    --G-text-font-family: 'Open Sans', sans-serif;
+}
+
+html>*{
+    font-family: var(--G-text-font-family);
+}
+
+h1,h2,h3,h4,h5,h6 {
+    font-family: var(--G-header-font-family);
 }
