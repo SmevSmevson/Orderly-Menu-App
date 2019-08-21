@@ -1,0 +1,36 @@
+.menu-search{
+    &-container{
+        display: grid;
+        place-items: stretch;
+        grid-template-columns: 1fr 4fr 1fr;
+    }
+
+    &-btn-staff{
+        @include button-variant(
+            var(--search-staff-btn-text-color, #333),
+            var(--search-staff-btn-bg-color, #ccc),
+            var(--search-staff-btn-hover-bg-color, #ddd),
+            var(--search-staff-btn-pressed-bg-color, #bbb),
+            1px solid var(--search-staff-btn-border-color, #bbb)    
+        );
+        border-radius: .3rem 0 0 .3rem;
+        border-right: 0;
+    }
+
+    &-input-search{
+        @include input-default();
+        border-radius: 0;
+    }
+
+    &-btn-allergies{
+        @include button-variant(
+            var(--search-allergies-btn-text-color, #333),
+            var(--search-allergies-btn-bg-color, #ccc),
+            var(--search-allergies-btn-hover-bg-color, #ddd),
+            var(--search-allergies-btn-pressed-bg-color, #bbb),
+            1px solid var(--search-allergies-btn-border-color, #bbb)    
+        );
+        border-radius: 0 .3rem .3rem 0;
+        border-left: 0;
+    }
+}

@@ -1,0 +1,144 @@
+.menu-receipt-item{
+
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1em .5em 1em 1.5em;
+    border-bottom: 1px solid #ddd;
+    
+    &-cancel{
+        position: absolute;
+        top:0;
+        left: 0;
+        bottom: 0;
+        padding: .3rem;
+        @include button-variant(
+            var(--setup-back-btn-text-color, #333),
+            var(--setup-back-btn-bg-color, #eee),
+            var(--setup-back-btn-hover-bg-color, #ddd),
+            var(--setup-back-btn-pressed-bg-color, #bbb),
+            0px solid var(--setup-back-btn-border-color, #eee) 
+        );
+        border-radius: 0;
+    }
+    
+    &-name{
+        font-weight: bold;
+        flex: 0 0 10rem;
+        margin: -.5rem 0 .5rem 0;
+    }
+
+    &-img{
+        width: 5rem;
+        height: 5rem;
+        object-fit: cover;
+        border: 1px solid #ccc;
+        border-radius: .3rem;
+    }
+
+    // overide the margin so the name looks centered on confirm order screen
+    &-img+&-name{
+        margin: 0;
+    }
+    
+    &-amount-container{
+        display: flex;
+        align-items: stretch;
+        border: 1px solid #eee;
+        border-radius: .3rem;
+    }
+    
+    &-amount{
+        width: 2em;
+        text-align: center;
+        padding: .5rem;
+    }
+
+    &-amount-subtract{
+        @include button-variant(
+            var(--item-subtract-btn-text-color, #333),
+            var(--item-subtract-btn-bg-color, #eee),
+            var(--item-subtract-btn-hover-bg-color, #ddd),
+            var(--item-subtract-btn-pressed-bg-color, #bbb),
+            0px solid var(--item-subtract-btn-border-color, #eee) 
+        );
+        border-radius: .3rem 0 0 .3rem;
+        border: 0;
+        padding: 0 1rem;
+    }
+
+    &-amount-add{
+        @include button-variant(
+            var(--item-add-btn-text-color, #333),
+            var(--item-add-btn-bg-color, #eee),
+            var(--item-add-btn-hover-bg-color, #ddd),
+            var(--item-add-btn-pressed-bg-color, #bbb),
+            0px solid var(--item-add-btn-border-color, #eee) 
+        );
+        border-radius: 0 .3rem .3rem 0;
+        border: 0;
+        padding: 0 1rem;
+    }
+    
+    &-set-container{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        padding-top: 1em;
+    }
+
+    &-set-change-btn{
+        @include button-variant(
+            var(--item-change-btn-text-color, #333),
+            var(--item-change-btn-bg-color, #eee),
+            var(--item-change-btn-hover-bg-color, #ddd),
+            var(--item-change-btn-pressed-bg-color, #bbb),
+            1px solid var(--item-change-btn-border-color, #eee) 
+        );
+        padding: .5rem;
+        margin-top: .5rem;
+    }
+    
+    &-set{
+        display: flex;
+        flex-direction: column;
+        padding: .5em 0;
+        border-top: 1px dashed #ddd;
+    }
+
+    &-set-item{
+        display: flex;
+        justify-content: stretch;
+    }
+    
+    &-set-item-category{
+        flex: 1 1 50%;
+        font-style: italic;
+    }
+    
+    &-set-item-name{
+        flex: 1 1 100%;
+    }
+
+    &-subtotal{
+        flex: 0 0 100%;
+        margin-top: 1rem;
+        background: #fafafa;
+        margin-bottom: -1rem;
+        margin-left: -.5rem;
+        padding: .5rem;
+        text-align: right;
+    }
+
+    &-subtotal-title{
+        text-align: right;
+    }
+
+    &-subtotal-value{
+        text-align: right;
+        font-weight: bold;
+        padding-left: 4rem;
+    }
+}

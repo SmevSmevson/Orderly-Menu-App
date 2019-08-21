@@ -1,0 +1,55 @@
+.allergy-screen-layout{
+    display: grid;
+    place-items: stretch;
+    height: calc(100vh - 2rem);
+    padding: 1rem;
+
+    grid-gap: 1rem;
+    grid-template-columns: 1fr;
+    grid-template-rows: 4em auto 4em;
+    grid-template-areas: 
+    "sch"
+    "alg"
+    "btn"
+}
+
+.allergy-search-container{
+    grid-area: sch;
+
+    display: grid;
+    place-items: stretch;
+    grid-template-columns: 1fr 4fr 1fr;
+}
+
+.allergy-list-container{
+    grid-area: alg;
+}
+
+.allergy-button-container{
+    grid-area: btn;
+    display: flex;
+}
+
+.allergy-button-clear{
+    flex-grow: 1;
+    @include button-variant(
+        var(--allergy-clear-btn-text-color, #333),
+        var(--allergy-clear-btn-bg-color, #ccc),
+        var(--allergy-clear-btn-hover-bg-color, #ddd),
+        var(--allergy-clear-btn-pressed-bg-color, #bbb),
+        1px solid var(--allergy-clear-btn-border-color, #bbb)    
+    );
+    border-radius: .3rem 0 0 .3rem;
+}
+
+.allergy-button-back{
+    flex-grow: 1;
+    @include button-variant(
+        var(--allergy-back-btn-text-color, #333),
+        var(--allergy-back-btn-bg-color, #ccc),
+        var(--allergy-back-btn-hover-bg-color, #ddd),
+        var(--allergy-back-btn-pressed-bg-color, #bbb),
+        1px solid var(--allergy-back-btn-border-color, #bbb)    
+    );
+    border-radius: 0 .3rem .3rem 0;
+}

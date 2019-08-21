@@ -1,0 +1,21 @@
+.complete-screen-layout {
+    height: 90vh;
+    width: 80vw;
+    margin: 5vh auto;
+
+}
+.complete-receipt-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #ccc;
+    border-radius: .3rem;
+    height: 100%;
+}
+
+.complete-receipt-title{
+    text-align: center;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 1rem;
+}

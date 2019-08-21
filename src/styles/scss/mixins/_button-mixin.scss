@@ -1,0 +1,16 @@
+@mixin button-variant($text-color, $background, $background-hover, $background-active, $border){
+
+    border: $border;
+    border-radius: .3rem;
+    background-color: $background;
+    transition: all 300ms ease-in-out;
+    color: $text-color;
+
+    &:hover{
+        background-color: $background-hover;
+    }
+
+    &:active, &:focus{
+        background-color: $background-active;
+    }
+}

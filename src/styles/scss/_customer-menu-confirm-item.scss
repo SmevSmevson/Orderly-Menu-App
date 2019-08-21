@@ -1,0 +1,25 @@
+.item-details-screen-layout{
+    display: grid;
+    place-items: stretch;
+    height: calc(100vh - 2rem);
+    padding: 1rem;
+
+    grid-gap: 1rem;
+    grid-template-columns: 1fr;
+    grid-template-rows: 4em 1fr;
+    grid-template-areas: 
+    "sch"
+    "itm"
+}
+
+.item-details-search-container{
+    grid-area: sch;
+
+    display: grid;
+    place-items: stretch;
+    grid-template-columns: 1fr 4fr 1fr;
+}
+
+.item-details-container{
+    grid-area: itm;
+}

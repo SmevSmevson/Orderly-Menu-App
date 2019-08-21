@@ -1,5 +1,25 @@
-@import './global-vars';
-@import './header-vars';
-@import './header';
+@import './mixins';
+@import './vars';
 
-@import url('https://fonts.googleapis.com/css?family=Josefin+Sans:100&display=swap');
+@import './normalize';
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans:100|Open+Sans&display=swap');
+@import './editor';
+
+@import './login';
+@import './menu-selection';
+@import './customer-menu-setup';
+@import './customer-menu';
+@import './customer-menu-header';
+@import './customer-menu-tabs';
+@import './customer-menu-item-list';
+@import './customer-menu-item';
+@import './customer-menu-receipt';
+@import './customer-menu-receipt-item-list';
+@import './customer-menu-receipt-item';
+@import './customer-menu-receipt-total';
+@import './customer-menu-confirm-item';
+@import './customer-menu-item-details';
+@import './customer-menu-allergies';
+@import './customer-menu-allergy';
+@import './customer-menu-confirm-order';
+@import './customer-menu-order-complete';

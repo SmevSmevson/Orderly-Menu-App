@@ -1,0 +1,64 @@
+.login-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--login-body-bg-color, #fff);
+}
+
+.login-form{
+    width: 50vw;
+    height: 50vh;
+    margin: 20vh 20vw;
+    padding: 5vh 5vw;
+    border: 1px #ccc solid;
+    border-radius: .3rem;
+    background-color: var(--login-card-bg-color, #eee);
+
+    display: grid;
+    place-items: stretch;;
+
+    grid-gap: 2rem;
+    grid-template-columns: max-content 1fr;
+    grid-template-areas: 
+    "accl acc"
+    "pswl psw"
+    "btn btn"
+}
+
+.acc-label{
+    grid-area: accl;
+    text-align: right;
+    align-self: center;
+}
+
+.acc-input{
+    grid-area: acc;
+    @include input-default();
+
+}
+
+.psw-label{
+    grid-area: pswl;
+    text-align: right;
+    align-self: center;
+}
+
+.psw-input{
+    grid-area: psw;
+    @include input-default();
+
+}
+
+.btn-login{
+    grid-area: btn;
+    padding: .5rem;
+    @include button-variant(
+        var(--login-btn-text-color, #333),
+        var(--login-btn-bg-color, #ccc),
+        var(--login-btn-hover-bg-color, #ddd),
+        var(--login-btn-pressed-bg-color, #bbb),
+        1px solid var(--login-btn-border-color, #bbb)    
+    );
+}

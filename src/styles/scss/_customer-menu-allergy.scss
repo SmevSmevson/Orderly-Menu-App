@@ -1,0 +1,31 @@
+.allergy{
+    display: inline-block;
+    position: relative;
+    // calc width for 8 in each row minus margins 
+    width: calc((100% / 8) - (8rem / 9));
+    margin-right: 1rem;
+    margin-bottom: 1rem;
+    border-radius: .3rem;
+    overflow: hidden;
+    box-shadow: 0 0 0 1px #ccc;
+
+    &:nth-child(8n+8){
+        margin-right: 0;
+    }
+}
+
+.allergy-icon{
+    height: 75%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.allergy-name{
+    font-weight: bold;
+    text-align: center;
+    padding: 1rem 0;
+}
+
+.allergy-selected {
+    box-shadow: 0 0 0 2px #0c0;
+}

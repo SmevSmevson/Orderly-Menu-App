@@ -1,0 +1,62 @@
+.confirm-screen-layout {
+    height: calc(100vh - 2rem);
+    width: 80vw;
+    margin: 1rem auto;
+}
+
+.confirm-receipt-container{
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #ccc;
+    border-radius: .3rem;
+    height: 100%;
+    overflow: hidden;
+}
+
+.confirm-receipt-title{
+    text-align: center;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 1rem;
+    margin-bottom: 0;
+}
+
+// displayed items and totals are the same at the reciept
+// they use styles from the following files
+// _customer-menu-receipt-item-list
+// _customer-menu-receipt-item
+// _customer-menu-receipt-total
+
+.confirm-receipt-buttons-container {
+    display: flex;
+    justify-content: stretch;
+}
+
+.confirm-receipt-back{
+    @include button-variant(
+        var(--reciept-back-btn-text-color, #333),
+        var(--reciept-back-btn-bg-color, #ccc),
+        var(--reciept-back-btn-hover-bg-color, #ddd),
+        var(--reciept-back-btn-pressed-bg-color, #bbb),
+        1px solid var(--reciept-back-btn-border-color, #bbb)    
+    );
+    font-size: 1.5em;
+    letter-spacing: .1ch;
+    height: 6rem;
+    flex: 1 0 auto;
+    border-radius: 0;
+}
+
+.confirm-receipt-order{
+    @include button-variant(
+        var(--reciept-order-btn-text-color, #333),
+        var(--reciept-order-btn-bg-color, #ccc),
+        var(--reciept-order-btn-hover-bg-color, #ddd),
+        var(--reciept-order-btn-pressed-bg-color, #bbb),
+        1px solid var(--reciept-order-btn-border-color, #bbb)    
+    );
+    font-size: 1.5em;
+    letter-spacing: .1ch;
+    height: 6rem;
+    flex: 1 0 auto;
+    border-radius: 0;
+}
