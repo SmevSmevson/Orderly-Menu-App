@@ -10,20 +10,13 @@ export const items = [
 		description: 'lorem',
 		allergies: ['meat'],
 		nutrition: [
-			{category: 'calories', amount: '500kCal'},
-			{category: 'fat', amount: '100g'},
+			{ category: 'calories', amount: '500kCal' },
+			{ category: 'fat', amount: '100g' },
 		],
 		setItem: true,
 		setMenus: [
-			{category: 'sides', items: [
-				100,
-				101
-			]},
-			{category: 'drinks', items: [
-				300,
-				301,
-				302
-			]}
+			{ category: 'sides', items: [100, 101] },
+			{ category: 'drinks', items: [300, 301, 302] },
 		],
 		higlight: false,
 		badgeSrc: '',
@@ -33,49 +26,36 @@ export const items = [
 		name: 'cheeseburger set',
 		price: '1300',
 		imageSrc: 'https://via.placeholder.com/256',
-		description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis doloribus eaque reiciendis eligendi ipsum consequatur nam. Labore beatae quaerat, facere nemo facilis ad quibusdam amet, mollitia tenetur possimus, ipsum molestias.',
+		description:
+			'Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis doloribus eaque reiciendis eligendi ipsum consequatur nam. Labore beatae quaerat, facere nemo facilis ad quibusdam amet, mollitia tenetur possimus, ipsum molestias.',
 		allergies: ['meat', 'dairy'],
 		nutrition: [
-			{category: 'calories', amount: '500kCal'},
-			{category: 'fat', amount: '100g'},
+			{ category: 'calories', amount: '500kCal' },
+			{ category: 'fat', amount: '100g' },
 		],
 		setItem: true,
 		setMenus: [
-			{category: 'sides', items: [
-				100,
-				101
-			]},
-			{category: 'drinks', items: [
-				300,
-				301,
-				302
-			]}
+			{ category: 'sides', items: [100, 101] },
+			{ category: 'drinks', items: [300, 301, 302] },
 		],
 		higlight: false,
 		badgeSrc: 'https://via.placeholder.com/64',
 	},
 	{
 		id: 2,
-		name: 'chille cheesburger set',
+		name: 'chili cheeseburger set',
 		price: '1400',
 		imageSrc: 'https://via.placeholder.com/256',
 		description: 'lorem',
 		allergies: ['meat', 'dairy'],
 		nutrition: [
-			{category: 'calories', amount: '500kCal'},
-			{category: 'fat', amount: '100g'},
+			{ category: 'calories', amount: '500kCal' },
+			{ category: 'fat', amount: '100g' },
 		],
 		setItem: true,
 		setMenus: [
-			{category: 'sides', items: [
-				100,
-				101
-			]},
-			{category: 'drinks', items: [
-				300,
-				301,
-				302
-			]}
+			{ category: 'sides', items: [100, 101] },
+			{ category: 'drinks', items: [300, 301, 302] },
 		],
 		higlight: true,
 		badgeSrc: 'https://via.placeholder.com/64',
@@ -88,8 +68,8 @@ export const items = [
 		description: 'lorem',
 		allergies: ['meat'],
 		nutrition: [
-			{category: 'calories', amount: '500kCal'},
-			{category: 'fat', amount: '100g'},
+			{ category: 'calories', amount: '500kCal' },
+			{ category: 'fat', amount: '100g' },
 		],
 		setItem: false,
 		higlight: false,
@@ -103,8 +83,8 @@ export const items = [
 		description: 'lorem',
 		allergies: ['meat', 'dairy'],
 		nutrition: [
-			{category: 'calories', amount: '500kCal'},
-			{category: 'fat', amount: '100g'},
+			{ category: 'calories', amount: '500kCal' },
+			{ category: 'fat', amount: '100g' },
 		],
 		setItem: false,
 		higlight: false,
@@ -112,14 +92,14 @@ export const items = [
 	},
 	{
 		id: 5,
-		name: 'chille cheesburger',
+		name: 'chili cheeseburger',
 		price: '1000',
 		imageSrc: 'https://via.placeholder.com/256',
 		description: 'lorem',
 		allergies: ['meat', 'dairy'],
 		nutrition: [
-			{category: 'calories', amount: '500kCal'},
-			{category: 'fat', amount: '100g'},
+			{ category: 'calories', amount: '500kCal' },
+			{ category: 'fat', amount: '100g' },
 		],
 		setItem: false,
 		higlight: false,
@@ -133,8 +113,8 @@ export const items = [
 		description: 'lorem',
 		allergies: [],
 		nutrition: [
-			{category: 'calories', amount: '500kCal'},
-			{category: 'fat', amount: '100g'},
+			{ category: 'calories', amount: '500kCal' },
+			{ category: 'fat', amount: '100g' },
 		],
 		setItem: false,
 		higlight: false,
@@ -148,20 +128,13 @@ export const items = [
 		description: 'lorem',
 		allergies: [],
 		nutrition: [
-			{category: 'calories', amount: '500kCal'},
-			{category: 'fat', amount: '100g'},
+			{ category: 'calories', amount: '500kCal' },
+			{ category: 'fat', amount: '100g' },
 		],
 		setItem: true,
 		setMenus: [
-			{category: 'sides', items: [
-				100,
-				101
-			]},
-			{category: 'drinks', items: [
-				300,
-				301,
-				302
-			]}
+			{ category: 'sides', items: [100, 101] },
+			{ category: 'drinks', items: [300, 301, 302] },
 		],
 		higlight: false,
 		badgeSrc: 'https://via.placeholder.com/64',
@@ -175,8 +148,8 @@ export const items = [
 		description: 'lorem',
 		allergies: [],
 		nutrition: [
-			{category: 'calories', amount: '50kCal'},
-			{category: 'fat', amount: '10g'},
+			{ category: 'calories', amount: '50kCal' },
+			{ category: 'fat', amount: '10g' },
 		],
 		setItem: false,
 		higlight: false,
@@ -189,8 +162,8 @@ export const items = [
 		description: 'lorem',
 		allergies: [],
 		nutrition: [
-			{category: 'calories', amount: '50kCal'},
-			{category: 'fat', amount: '10g'},
+			{ category: 'calories', amount: '50kCal' },
+			{ category: 'fat', amount: '10g' },
 		],
 		setItem: false,
 		higlight: false,
@@ -205,8 +178,8 @@ export const items = [
 		description: 'lorem',
 		allergies: [],
 		nutrition: [
-			{category: 'calories', amount: '50kCal'},
-			{category: 'fat', amount: '10g'},
+			{ category: 'calories', amount: '50kCal' },
+			{ category: 'fat', amount: '10g' },
 		],
 		setItem: false,
 		higlight: false,
@@ -219,8 +192,8 @@ export const items = [
 		description: 'lorem',
 		allergies: [],
 		nutrition: [
-			{category: 'calories', amount: '50kCal'},
-			{category: 'fat', amount: '10g'},
+			{ category: 'calories', amount: '50kCal' },
+			{ category: 'fat', amount: '10g' },
 		],
 		setItem: false,
 		higlight: false,
@@ -233,8 +206,8 @@ export const items = [
 		description: 'lorem',
 		allergies: [],
 		nutrition: [
-			{category: 'calories', amount: '50kCal'},
-			{category: 'fat', amount: '10g'},
+			{ category: 'calories', amount: '50kCal' },
+			{ category: 'fat', amount: '10g' },
 		],
 		setItem: false,
 		higlight: false,

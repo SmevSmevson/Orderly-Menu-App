@@ -6,14 +6,13 @@ import Customizer from './components/Customizer'
 
 import Home from './views/Home'
 import Login from './views/Login'
-import MenuSelection from './views/MenuSelection';
-import CustomerMenuSetup from './views/CustomerMenuSetup';
-import CustomerMenu from './views/CustomerMenu';
-import CustomerMenuConfirmItem from "./views/CustomerMenuConfirmItem";
-import CustomerMenuAllergies from "./views/CustomerMenuAllergies";
-import CustomerMenuConfirmOrder from "./views/CustomerMenuConfirmOrder";
-import CustomerMenuOrderComplete from './views/CustomerMenuOrderComplete';
-
+import MenuSelection from './views/MenuSelection'
+import CustomerMenuSetup from './views/CustomerMenuSetup'
+import CustomerMenu from './views/CustomerMenu'
+import CustomerMenuConfirmItem from './views/CustomerMenuConfirmItem'
+import CustomerMenuAllergies from './views/CustomerMenuAllergies'
+import CustomerMenuConfirmOrder from './views/CustomerMenuConfirmOrder'
+import CustomerMenuOrderComplete from './views/CustomerMenuOrderComplete'
 
 const App = () => {
 	return (
@@ -30,6 +29,7 @@ const App = () => {
 				<CustomerMenuConfirmOrder path="customer-menu/confirm-order" />
 				<CustomerMenuOrderComplete path="customer-menu/order-complete" />
 			</Router>
+			<alanBtn />
 		</CSSVarsContextProvider>
 	)
 }

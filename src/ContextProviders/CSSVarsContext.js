@@ -3,14 +3,14 @@ import React, { useState, createContext } from 'react'
 export const CSSVarsContext = createContext(['customVars', () => {}])
 
 const CSSVarsContextProvider = (props) => {
-    const [customVars, setCustomVars] = useState([])
-    const [node, setNode] = useState(null)
+	const [customVars, setCustomVars] = useState([])
+	const [node, setNode] = useState(null)
 
-    function changeCSSVar(event, value) {
+	function changeCSSVar(event, value) {
 		value.value = event.target.value
 		node.style.setProperty(value.property, `${value.value}`)
 	}
-	
+
 	function parseCSSVarsFromRules(matchedRules) {
 		let cssVars = []
 		matchedRules.forEach((csstext) => {
@@ -31,7 +31,7 @@ const CSSVarsContextProvider = (props) => {
 		})
 		return cssVars
 	}
-	
+
 	// works in chrome and safari and firefox
 	function getElementCSSVars(event) {
 		setNode(event.currentTarget)
@@ -56,11 +56,11 @@ const CSSVarsContextProvider = (props) => {
 				)
 				cssVars = parseCSSVarsFromRules(matchedNodeSelectorRules)
 			})
-            setCustomVars(cssVars)
+			setCustomVars(cssVars)
 			return cssVars
 		} else {
 			let compStyles = getComputedStyle(event.currentTarget)
-	
+
 			let cssVars = Object.values(compStyles).reduce((acc, cur) => {
 				if (cur.includes('--')) {
 					acc.push({
@@ -70,16 +70,18 @@ const CSSVarsContextProvider = (props) => {
 				}
 				return acc
 			}, [])
-            setCustomVars(cssVars)
+			setCustomVars(cssVars)
 			return cssVars
 		}
 	}
 
-    return (
-        <CSSVarsContext.Provider value={{getElementCSSVars, changeCSSVar, customVars}}>
-            {props.children}
-        </CSSVarsContext.Provider>
-    )
+	return (
+		<CSSVarsContext.Provider
+			value={{ getElementCSSVars, changeCSSVar, customVars }}
+		>
+			{props.children}
+		</CSSVarsContext.Provider>
+	)
 }
 
 export default CSSVarsContextProvider

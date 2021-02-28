@@ -9,8 +9,13 @@ const Login = ({ navigate }) => {
 	}
 
 	return (
-		<div id="login-container" className="login-container" 
-			onClick={(e) => { context.getElementCSSVars(e) }}
+		// eslint-disable-next-line jsx-a11y/click-events-have-key-events, jsx-a11y/no-static-element-interactions
+		<div
+			id="login-container"
+			className="login-container"
+			onClick={(e) => {
+				context.getElementCSSVars(e)
+			}}
 		>
 			<div className="login-form">
 				<label className="acc-label" htmlFor="account-name">
@@ -21,7 +26,9 @@ const Login = ({ navigate }) => {
 					account password
 				</label>
 				<input className="psw-input" type="text" name="account-password" />
-				<button className="btn-login" onClick={loginEvent}>login</button>
+				<button className="btn-login" onClick={loginEvent}>
+					login
+				</button>
 			</div>
 		</div>
 	)
